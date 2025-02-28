@@ -80,10 +80,11 @@ select {
 html {
 	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif; */
 	font-family: "Esteban", serif;
+	background-color: hsl(180, 5%, 95%);
 
 }
 
-body {
+.site-width {
 	width: 90%;
 	max-width: 1000px;
 	margin-left: auto;
@@ -96,11 +97,25 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
 	font-family: "Montserrat", serif;
 	font-weight: 800;
 }
 
+h1, .h1 {
+	font-size: 2rem;
+}
+
+header {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
 p {
 	max-width: 60ch;
 }

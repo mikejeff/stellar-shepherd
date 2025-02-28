@@ -1,25 +1,20 @@
 ---
-import "../styles/global.css";
+import HeadImports from "../components/HeadImports.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 const pageTitle = "Home Page";
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+		<HeadImports />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		<h1>{pageTitle}</h1>
+		<body>
+			<Header />
+			<div class="site-width">
+				<h1>{pageTitle}</h1>
+			</div>
+			<Footer />
 	</body>
 </html>
