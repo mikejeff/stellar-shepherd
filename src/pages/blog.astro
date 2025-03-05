@@ -1,19 +1,9 @@
 ---
-import HeadImports from "../components/HeadImports.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "My Astro Learning Blog";
 ---
 
-<html lang="en">
-	<head>
-		<HeadImports />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-		<div class="site-width">
-			<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
 			<p>
 				This is where I will post about my journey learning Astro. This is perfect
 				since I plan on writing a "research blog" this year. A perfect fit!
@@ -23,7 +13,4 @@ const pageTitle = "My Astro Learning Blog";
 				<li><a href="/posts/post-2/">Post 2</a></li>
 				<li><a href="/posts/post-3/">Post 3</a></li>
 			</ul>
-		</div>
-		<Footer />
-	</body>
-</html>
+</BaseLayout>

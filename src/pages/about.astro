@@ -1,9 +1,7 @@
 ---
-import HeadImports from "../components/HeadImports.astro" 
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About Me";
+
 const identity = {
 	firstName: "Mike",
 	country: "USA",
@@ -16,21 +14,10 @@ const skills = ["HTML", "CSS", "JavaScript", "Design", "Astro"];
 const happy = true;
 const finished = false;
 const goal = 3;
-
-// const skillColor = "navy";
-// const fontWeight = "bold";
-// const textCase = "uppercase";
 ---
 
-<html lang="en">
-	<head>
-		<HeadImports />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-			<div class="site-width">
-			<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
+
 			<h2>&hellip; and my new Astro Site</h2>
 			<p>I'm Mike, a developer in North Reading, MA.</p>
 			<p>
@@ -73,7 +60,5 @@ const goal = 3;
 					)
 				}
 			</ul>
-		</div>
-		<Footer />
-	</body>
-</html>
+
+	</BaseLayout>
