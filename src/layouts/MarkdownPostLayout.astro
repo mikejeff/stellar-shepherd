@@ -4,7 +4,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<small>Written by {frontmatter.author}</small>
-<small>Published on {frontmatter.pubDate}</small>
+<small>Written by {frontmatter.author} on {frontmatter.pubDate.toString().slice(0,10)}</small>
 <slot />
 </BaseLayout>
